@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Pop-Up Prompt</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-form">
+        <button onclick="showLoginPrompt()">Login</button>
+    </div>
+
+    <!-- The pop-up prompt -->
+    <div id="loginPrompt" class="popup">
+        <div class="popup-content">
+            <h3>Would you like to save your password?</h3>
+            <form id="loginForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <div class="actions">
+                    <button type="submit">Login</button>
+                    <button type="button" onclick="closeLoginPrompt()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
